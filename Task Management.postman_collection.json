@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "43094098-365b-4062-9330-fa9f77854cde",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"taskName\" : \"codereview\",\n\t\"description\" : \"dummy description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/updateTask/5edbdc3181e2f64d5019c776",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateTask",
+						"5edbdc3181e2f64d5019c776"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deleteTask/5edb910d14abfc1e6cc75519",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteTask",
+						"5edb910d14abfc1e6cc75519"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"taskName\" : \"codereview\",\n\t\"description\" : \"review the code\",\n\t\"StartTime\" : \"2020-6-30\",\n\t\"EndTime\" : \"2020-6-31\",\n\t\"Status\" : \"running\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createTask/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createTask",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTask(Sort)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "admin123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/getTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getTaskByName?name=test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTaskByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskByDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getTaskByDate?StartTime=2020-05-31T18:30:00.000Z&EndTime=2020-06-06T18:30:00.000Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTaskByDate"
+					],
+					"query": [
+						{
+							"key": "StartTime",
+							"value": "2020-05-31T18:30:00.000Z"
+						},
+						{
+							"key": "EndTime",
+							"value": "2020-06-06T18:30:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTop9Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getProfile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
